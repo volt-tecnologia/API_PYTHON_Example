@@ -130,7 +130,7 @@
         }
 
     """
-    resp = self.vd.configEthernet(self, boolDhcp, newhost, newip, newgtw, newmask, newdns1, newdns2)
+    resp = self.vd.configEthernet(boolDhcp, newhost, newip, newgtw, newmask, newdns1, newdns2)
 ### Exemplo
         """
         Configurar a interface de rede com os argumentos:
