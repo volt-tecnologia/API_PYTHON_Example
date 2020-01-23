@@ -286,17 +286,17 @@ class WindowUI(object):
             self.uptimeField.setText(vd.getUptime())
             self.tempField.setText(vd.lastInfo['temp']+' °C')
             self.dataHoraField.setText(vd.getDate()+'-'+vd.getTime())
-            self.showTomada1.setStyleSheet("background-color:"+("gray" if vd.getRmac(1) == 'false' else (colorVerde if vd.getAc(1) == '0' else "red"))+"");
+            self.showTomada1.setStyleSheet("background-color:"+("gray" if not vd.getRmac(1) else (colorVerde if vd.getAc(1) else "red"))+"");
 
-            self.showTomada2.setStyleSheet("background-color:"+("gray" if vd.getRmac(2) == 'false' else (colorVerde if vd.getAc(2) == '0' else "red"))+"");
-            self.showTomada3.setStyleSheet("background-color:"+("gray" if vd.getRmac(3) == 'false' else (colorVerde if vd.getAc(3) == '0' else "red"))+"");
-            self.showTomada4.setStyleSheet("background-color:"+("gray" if vd.getRmac(4) == 'false' else (colorVerde if vd.getAc(4) == '0' else "red"))+"");
-            self.showTomada5.setStyleSheet("background-color:"+("gray" if vd.getRmac(5) == 'false' else (colorVerde if vd.getAc(5) == '0' else "red"))+"");
-            self.showTomada6.setStyleSheet("background-color:"+("gray" if vd.getRmac(6) == 'false' else (colorVerde if vd.getAc(6) == '0' else "red"))+"");
-            self.showTomada7.setStyleSheet("background-color:"+("gray" if vd.getRmac(7) == 'false' else (colorVerde if vd.getAc(7) == '0' else "red"))+"");
-            self.showTomada8.setStyleSheet("background-color:"+("gray" if vd.getRmac(8) == 'false' else (colorVerde if vd.getAc(8) == '0' else "red"))+"");
-            self.showTomada9.setStyleSheet("background-color:"+("gray" if vd.getRmac(9) == 'false' else (colorVerde if vd.getAc(9) == '0' else "red"))+"");
-            self.showTomada10.setStyleSheet("background-color:"+("gray" if vd.getRmac(10) == 'false' else (colorVerde if vd.getAc(10) == '0' else "red"))+"");
+            self.showTomada2.setStyleSheet("background-color:"+("gray" if not vd.getRmac(2) else (colorVerde if vd.getAc(2) else "red"))+"");
+            self.showTomada3.setStyleSheet("background-color:"+("gray" if not vd.getRmac(3) else (colorVerde if vd.getAc(3) else "red"))+"");
+            self.showTomada4.setStyleSheet("background-color:"+("gray" if not vd.getRmac(4) else (colorVerde if vd.getAc(4) else "red"))+"");
+            self.showTomada5.setStyleSheet("background-color:"+("gray" if not vd.getRmac(5) else (colorVerde if vd.getAc(5) else "red"))+"");
+            self.showTomada6.setStyleSheet("background-color:"+("gray" if not vd.getRmac(6) else (colorVerde if vd.getAc(6) else "red"))+"");
+            self.showTomada7.setStyleSheet("background-color:"+("gray" if not vd.getRmac(7) else (colorVerde if vd.getAc(7) else "red"))+"");
+            self.showTomada8.setStyleSheet("background-color:"+("gray" if not vd.getRmac(8) else (colorVerde if vd.getAc(8) else "red"))+"");
+            self.showTomada9.setStyleSheet("background-color:"+("gray" if not vd.getRmac(9) else (colorVerde if vd.getAc(9) else "red"))+"");
+            self.showTomada10.setStyleSheet("background-color:"+("gray" if not vd.getRmac(10) else (colorVerde if vd.getAc(10) else "red"))+"");
             self.hostname.setText(vd.lastInfo['devhost'])
             self.ip.setText(vd.lastInfo['devip'])
             self.gateway.setText(vd.lastInfo['devgtw'])
